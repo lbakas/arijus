@@ -6,6 +6,14 @@ Suinstaliuoti dependencies
 
     composer install
 
+Paleisti MySQL ir sukurti duomenų bazę, kurią įrašyti į .env failą padarius .env.example kopiją
+
+    php artisan migrate
+
+Sugeneruoti aplikacijos raktą
+
+    php artisan key:generate
+
 Paleisti serverį
 
     php artisan serve
