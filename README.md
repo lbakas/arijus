@@ -1,23 +1,23 @@
 Pasiklonavus projektą eiti pirmiausia į backend
 
-  cd backend
+    cd backend
 
 Suinstaliuoti dependencies
 
-  composer install
+    composer install
 
 Paleisti serverį
 
-  php artisan serve
+    php artisan serve
 
 Tada eiti į frontend naujame command lange
 
-  cd frontend
+    cd frontend
 
 Suinstaliuoti dependencies
 
-  npm install
+    npm install
 
 Paleisti serverį
 
-  npm run dev
+    npm run dev
