@@ -29,3 +29,5 @@ Suinstaliuoti dependencies
 Paleisti serverį
 
     npm run dev
+
+Įsitikinti, kad environment.js gerai nurodytas backendo url
