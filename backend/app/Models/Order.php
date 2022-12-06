@@ -27,14 +27,18 @@ class Order extends Model
         parent::boot();
 
         self::creating(function ($model) {
-            $last = Order::query()->orderBy('id', 'DESC')->first();
-
             $pad_char = '0';
             $pad_length = 6;
             $str_type = 'd';
             $format = "%{$pad_char}{$pad_length}{$str_type}";
 
-            $model->number = 'U' . sprintf($format, $last->id + 1);
+            $last = Order::query()->orderBy('id', 'DESC')->first();
+
+            if ($last) {
+              $model->number = 'U' . sprintf($format, $last->id + 1);
+            } else {
+              $model->number = 'U' . sprintf($format, 1);
+            }
         });
     }
 }
